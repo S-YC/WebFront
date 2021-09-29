@@ -1,0 +1,6 @@
+FROM node:lts-alpine
+WORKDIR /front
+COPY ./ ./
+RUN npm config set package-lock false
+RUN npm install --silence --loglevel=error
+CMD ["npm", "run", "start:local"] 
