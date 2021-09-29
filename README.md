@@ -1,7 +1,7 @@
 # StartReact
 
-###성연철의 개인 저장소입니다. 
-###React+Typescript로 구성되어 있습니다.  
+### 성연철의 개인 저장소입니다. 
+### React+Typescript로 Front 개발 소스코드가 구성되어 있습니다.  
 
 ### 사용법
 
