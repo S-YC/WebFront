@@ -155,7 +155,7 @@ const SignAgree: React.FC = () => {
           <SLMidContainer>
             <SLMidSubContainer view={view[0]}>
               <SLMainText>
-                게임판<br></br> 아이디를 찾기 위해 본인인증이<br></br>
+                아이디를 찾기 위해 본인인증이<br></br>
                 필요합니다.
               </SLMainText>
               <ButtonArea>
@@ -196,10 +196,10 @@ const SignAgree: React.FC = () => {
               </ButtonArea>
             </SLMidSubContainer>
             <SLMidSubContainer view={view[2]}>
-              <SLMainText>게임판에 가입되어 있지 않습니다.</SLMainText>
+              <SLMainText> 가입되어 있지 않습니다.</SLMainText>
               <MidInLine></MidInLine>
               <MidText>
-                게임판에 가입되어 있지 않습니다. <br></br>회원가입을 해주세요.
+                가입되어 있지 않습니다. <br></br>회원가입을 해주세요.
               </MidText>
               <ButtonArea>
                 <Button onClick={SearchHandler.bind(this, "/signAgree")}>

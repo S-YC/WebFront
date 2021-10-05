@@ -66,8 +66,8 @@ const SignAgree: React.FC = () => {
               <SLMainText>이미 가입된 정보가 있습니다.</SLMainText>
               <MidInLine></MidInLine>
               <CenterColumnBox>
-                GAMEPAN에 이미 가입된 회원정보가 있습니다. <br></br>기억이
-                안나시면 아이디 찾기를 통해서 아이디를 찾기 바랍니다.
+                이미 가입된 회원정보가 있습니다. <br></br>기억이 안나시면 아이디
+                찾기를 통해서 아이디를 찾기 바랍니다.
               </CenterColumnBox>
               <ButtonArea>
                 <Button onClick={SearchHandler.bind(this, "/login/SearchId")}>

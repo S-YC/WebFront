@@ -37,12 +37,24 @@ const useSign = (): IUseUserReturn => {
     // CODE- 201 : 사용가능, 202 : 중복
     return new Promise((res, rej) => {
       try {
-        if (result.payload.data.code === 201) {
-          return res(false);
-        } else if (result.payload.data.code === 202) {
-          return res(true);
+        if (result.payload.result) {
+          switch (result.payload.data.code) {
+            case 201: {
+              console.log(result.payload.data.code);
+              return res(false);
+              break;
+            }
+            case 202: {
+              console.log(result.payload.data.code);
+              return res(true);
+              break;
+            }
+            default: {
+              break;
+            }
+          }
         } else {
-          return res(true);
+          console.log(result.payload.error);
         }
       } catch (err) {
         return rej(err);
@@ -63,12 +75,25 @@ const useSign = (): IUseUserReturn => {
     // CODE- 201 : 사용가능, 202 : 중복
     return new Promise((res, rej) => {
       try {
-        if (result.payload.data.code === 201) {
-          return res(false);
-        } else if (result.payload.data.code === 202) {
-          return res(true);
+        if (result.payload.result) {
+          switch (result.payload.data.code) {
+            case 201: {
+              console.log(result.payload.data.code);
+              return res(false);
+              break;
+            }
+            case 202: {
+              console.log(result.payload.data.code);
+              return res(true);
+              break;
+            }
+            default: {
+              console.log(result.payload.data.code);
+              break;
+            }
+          }
         } else {
-          return res(true);
+          console.log(result.payload.error);
         }
       } catch (err) {
         return rej(err);

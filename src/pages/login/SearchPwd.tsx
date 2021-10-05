@@ -7,8 +7,8 @@ import {
   passwordRule,
   useInputRef,
 } from "../../store/hook/useInput";
-import useLogin from "../../store/modules/login/useLogin";
 import usePopup from "../../store/modules/popup/usePopup";
+import useSign from "../../store/modules/sign/useSign";
 import { CenterColumnBox, ColumnBox, RowBox } from "../../styles/comon/layout";
 import {
   SLmainContainer,
@@ -183,10 +183,12 @@ const SignAgree: React.FC = () => {
     inputArrs.push(inputObjs[key]);
   });
 
-  const { isEmailSelect } = useLogin();
+  const { isEmail } = useSign();
 
   const PwdCHandler = async () => {
-    const res = await isEmailSelect(email.value as string);
+    const res = await isEmail(email.value as string);
+
+    console.log(res);
 
     if (res) {
       setview([true, true, false, true]);
@@ -235,11 +237,9 @@ const SignAgree: React.FC = () => {
           </SLlogoContainer>
           <SLMidContainer>
             <SLMidSubContainer view={view[0]}>
-              <SLMainText>
-                게임판<br></br> 비밀번호 찾기
-              </SLMainText>
+              <SLMainText>비밀번호 찾기</SLMainText>
               <MidInLine></MidInLine>
-              <MidText>게임판 아이디(이메일)을 입력해주세요.</MidText>
+              <MidText> 아이디(이메일)을 입력해주세요.</MidText>
               {inputArrs.map((item, idx) => (
                 <ColumnBox key={idx}>
                   {item.params.id === "email" ? (
@@ -267,7 +267,7 @@ const SignAgree: React.FC = () => {
               </ButtonArea>
             </SLMidSubContainer>
             <SLMidSubContainer view={view[1]}>
-              <SLMainText> 게임판 아이디가 존재하지 않습니다.</SLMainText>
+              <SLMainText> 아이디가 존재하지 않습니다.</SLMainText>
               <MidInLine></MidInLine>
               <MidText>
                 입력한 정보와 일치하는 아이디가 존재하지 않습니다.

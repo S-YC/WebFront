@@ -148,7 +148,7 @@ const SignAgree: React.FC = () => {
           <SLMidContainer>
             <SLMidSubContainer view={false}>
               <SLMainText>
-                게임판 회원이 되신것을 <br></br> 환영합니다 :)
+                회원이 되신것을 <br></br> 환영합니다 :)
               </SLMainText>
               <MidLineArea>
                 <LeftLine>

@@ -52,8 +52,8 @@ export const fetchMatchList: AsyncThunk<
 
 export const MatchList: () => Promise<IRes<Array<IMatchitem>>> =
   async (): Promise<IRes<Array<IMatchitem>>> => {
-    const res: AxiosResponse<IRes<Array<IMatchitem>>> = await Http.post(
-      "/main/MatchList"
+    const res: AxiosResponse<IRes<Array<IMatchitem>>> = await Http.get(
+      "/main/matchlist"
     );
     return res.data;
   };
@@ -80,8 +80,8 @@ export const fetchChnnelList: AsyncThunk<
 
 export const channelList: () => Promise<IRes<Array<IChnnelitem>>> =
   async (): Promise<IRes<Array<IChnnelitem>>> => {
-    const res: AxiosResponse<IRes<Array<IChnnelitem>>> = await Http.post(
-      "/main/channelList"
+    const res: AxiosResponse<IRes<Array<IChnnelitem>>> = await Http.get(
+      "/main/channellist"
     );
     return res.data;
   };

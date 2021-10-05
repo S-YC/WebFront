@@ -261,7 +261,7 @@ const SignAgree: React.FC = () => {
           <SLMidContainer>
             <SLMidSubContainer view={false}>
               <SLMainText>
-                게임판 회원가입을 위하여 <br></br>서비스약관에 동의해주세요.
+                회원가입을 위하여 <br></br>서비스약관에 동의해주세요.
               </SLMainText>
               <RowBox>
                 <MidcheckBoxArea>

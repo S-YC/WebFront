@@ -62,7 +62,7 @@ export const sign: (param: IUserFetc) => Promise<IRes<IResSign>> = async (
   params: IUserFetc
 ): Promise<IRes<IResSign>> => {
   const res: AxiosResponse<IRes<IResSign>> = await Http.post(
-    "/sign/signup",
+    "/user/member",
     params
   );
   return res.data;
@@ -89,9 +89,9 @@ export const fetchIsEmail: AsyncThunk<
 );
 export const isEmail: (param: { email: string }) => Promise<IRes<IResSign>> =
   async (params: { email: string }): Promise<IRes<IResSign>> => {
-    const res: AxiosResponse<IRes<IResSign>> = await Http.post(
-      "/sign/isEmail",
-      params
+    const res: AxiosResponse<IRes<IResSign>> = await Http.get(
+      "/user/member/email",
+      { params }
     );
     return res.data;
   };
@@ -121,9 +121,9 @@ export const isnickName: (param: {
 }) => Promise<IRes<IResSign>> = async (params: {
   nickname: string;
 }): Promise<IRes<IResSign>> => {
-  const res: AxiosResponse<IRes<IResSign>> = await Http.post(
-    "/sign/isnickName",
-    params
+  const res: AxiosResponse<IRes<IResSign>> = await Http.get(
+    "/user/member/nickname",
+    { params }
   );
   return res.data;
 };

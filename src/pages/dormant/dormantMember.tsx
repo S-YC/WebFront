@@ -75,14 +75,12 @@ const SignAgree: React.FC = () => {
           </SLlogoContainer>
           <SLMidContainer>
             <SLMidSubContainer view={view[0]}>
-              <SLMainText>
-                게임판<br></br>휴면 아이디 재사용
-              </SLMainText>
+              <SLMainText>휴면 아이디 재사용</SLMainText>
               <MidInLine></MidInLine>
               <MidCommonArea>
                 <MidText2>
                   안녕하세요 {nickName}님<br></br>
-                  <br></br>GAMEPAN을 오랫동안 이용하지 않아 회원님의 아이디가
+                  <br></br>사이트를 오랫동안 이용하지 않아 회원님의 아이디가
                   휴면 <br></br> 상태로 전환되었습니다. <br></br>
                   <br></br>해당 아이디로 서비스를 다시 이용하고 싶은 경우에는,
                   휴대전화 <br></br>
@@ -104,7 +102,7 @@ const SignAgree: React.FC = () => {
               <MidCommonArea>
                 <MidText2>
                   재사용 신청이 모두 완료되었습니다.<br></br> 로그인 하셔서
-                  GAMEPAN 이용을 해주시기 바랍니다. <br></br>감사합니다.
+                  이용을 해주시기 바랍니다. <br></br>감사합니다.
                 </MidText2>
               </MidCommonArea>
               <ButtonArea>

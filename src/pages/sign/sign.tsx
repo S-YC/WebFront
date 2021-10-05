@@ -143,11 +143,12 @@ const SignAgree: React.FC = () => {
       alert("이메일을 양식에 맞게 입력해주세요." + "\n ex) 1234@naver.com");
       return;
     }
-
     sign({
       email: email.value,
       pwd: password.value,
       nickname: nickname.value,
+      agmkEmail: history.location.state.value[2],
+      agmkSmsLms: history.location.state.value[3],
     } as IUserFetc);
   };
 
@@ -262,6 +263,7 @@ const SignAgree: React.FC = () => {
       isCheck: async () => {
         if (nickname.value !== "") {
           const res = await isnickName(nickname.value as string);
+          console.log("nickname check", res);
           return res ? 1 : 2;
         }
         return 0;
@@ -305,7 +307,7 @@ const SignAgree: React.FC = () => {
           </SLlogoContainer>
           <SLMidContainer>
             <SLMidSubContainer view={false}>
-              <SLMainText>게임판 회원가입</SLMainText>
+              <SLMainText>회원가입</SLMainText>
               {inputArrs.map((item, idx) => (
                 <ColumnBox key={idx}>
                   <InputArea useinput={item.params}>

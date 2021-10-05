@@ -7,7 +7,6 @@ import soket, { ISocket } from "./soket/soketR";
 import user, { IUser } from "./user/userR";
 import main, { IMain } from "./main/mainR";
 import sign, { ISign } from "./sign/signR";
-import login, { ILogin } from "./login/loginR";
 /**
  * state interface 설정
  */
@@ -19,7 +18,6 @@ export interface State {
   popup: IPopupState;
   main: IMain;
   sign: ISign;
-  login: ILogin;
 }
 
 /**
@@ -41,7 +39,6 @@ const rootReducer = (state: State | undefined, action: AnyAction) => {
         popup,
         main,
         sign,
-        login,
       } as ReducersMapObject)(state, action);
   }
 };

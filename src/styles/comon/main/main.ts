@@ -4,7 +4,7 @@ import { ColumnBox } from "../layout";
 // 메인페이지 메인 컨테이너
 export const MainContainer = styled(ColumnBox)`
   max-width: 1280px;
-  border: 1px solid red;
+  // border: 1px solid red;
 `;
 
 // 리스트 컨테이너 (게임대회)
